@@ -32,11 +32,11 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book getById(Integer id) {
-       return bookDao.getById(id);
+       return bookDao.getById1(id);
     }
 
     @Override
     public List<Book> getAll() {
-        return bookDao.getAll();
+        return bookDao.getAll1();
     }
 }

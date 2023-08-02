@@ -1,13 +1,15 @@
 package org.example.config;
 
+
 import org.springframework.context.annotation.*;
-import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 @Configuration
-//@ComponentScan({"org.example.service","org.example.dao"})
 @ComponentScan({"org.example.service"})
-@PropertySource("jdbc.properties")
+@PropertySource("classpath:jdbc.properties")
 @Import({JdbcConfig.class,MyBatisConfig.class})
-public class SpingConfig {
+@EnableTransactionManagement
+public class SpringConfig {
+
 }

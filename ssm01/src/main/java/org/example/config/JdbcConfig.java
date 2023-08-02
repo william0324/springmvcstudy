@@ -23,14 +23,15 @@ public class JdbcConfig {
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setDriverClassName(driver);
         dataSource.setUrl(url);
-        dataSource.setName(username);
+        dataSource.setUsername(username);
         dataSource.setPassword(password);
         return dataSource;
     }
+    //事务管理器
     @Bean
-    public PlatformTransactionManager transactionManager(DataSource dataSource){
-        DataSourceTransactionManager ds = new DataSourceTransactionManager();
-        ds.setDataSource(dataSource);
-        return ds;
+    public DataSourceTransactionManager getDataSourceTransactionManager(DataSource dataSource){
+        DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager();
+        dataSourceTransactionManager.setDataSource(dataSource);
+        return dataSourceTransactionManager;
     }
 }

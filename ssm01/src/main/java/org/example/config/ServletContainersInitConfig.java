@@ -4,12 +4,12 @@ import jakarta.servlet.Filter;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class SercletContainersInitConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class ServletContainersInitConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{SpingConfig.class};
+        return new Class[]{SpringConfig.class};
     }
 
     @Override

@@ -1,6 +1,6 @@
 package org.exampl.test;
 
-import org.example.config.SpingConfig;
+import org.example.config.SpringConfig;
 import org.example.pojo.Book;
 import org.example.service.BookService;
 import org.junit.jupiter.api.Test;
@@ -13,7 +13,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import java.util.List;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = SpingConfig.class)
+@ContextConfiguration(classes = SpringConfig.class)
 @WebAppConfiguration("src/main/resources")
 public class BookServiceTest {
     @Autowired
